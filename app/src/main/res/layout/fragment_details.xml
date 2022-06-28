@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <TextView
+                    android:id="@+id/tvSchoolName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SchoolName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    app:layout_constraintTop_toBottomOf="@id/tvSchoolName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    app:layout_constraintTop_toBottomOf="@id/tvPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Overview"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tvReadScoreLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ReadingScore:"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/tvOverview"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tvReadScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    app:layout_constraintTop_toBottomOf="@id/tvOverview"
+                    app:layout_constraintStart_toEndOf="@+id/tvReadScoreLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvWriteScoreLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Writing Score:"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/tvReadScore"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvWriteScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    app:layout_constraintTop_toBottomOf="@id/tvReadScore"
+                    app:layout_constraintStart_toEndOf="@+id/tvWriteScoreLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMathScoreLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Math Score:"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/tvWriteScore"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvMathScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    app:layout_constraintTop_toBottomOf="@id/tvWriteScore"
+                    app:layout_constraintStart_toEndOf="@+id/tvMathScoreLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
